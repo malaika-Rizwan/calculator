@@ -1,0 +1,80 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+    font-family: "Dosis", sans-serif;
+}
+
+.wrapper {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: black;
+    flex-basis: 400px;
+    height: 450px;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Calculator screen */
+.screen {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 2rem;
+    text-align: right;
+    overflow-x: auto;
+}
+
+/* Button container */
+.cal_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Button rows */
+.cal_button_row {
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons */
+.cal_button {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.cal_button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Special button sizes */
+.cal_button.double {
+    flex: 2; 
+    background-color: #eb92be;
+}
+.cal_button.triple {
+    flex: 3;
+}
